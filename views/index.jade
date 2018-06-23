@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  p Liste des questions
+
+  each question in questions
+    h2= question.enonce
+    ol
+        each reponse in question.reponses.qcm
+            li= reponse
+    
